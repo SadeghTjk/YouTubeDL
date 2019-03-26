@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.zzz40500:AndroidSweetSheet:1.1.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AndroidSweetSheet-1.1.0.aar/6e8e5f95c9cd2d2321f12685978d102d/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AndroidSweetSheet-1.1.0.aar/6e8e5f95c9cd2d2321f12685978d102d/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/AndroidSweetSheet-1.1.0.aar/6e8e5f95c9cd2d2321f12685978d102d/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.zzz40500/AndroidSweetSheet/1.1.0/959e09aee2b9e9eeeec7c8ac870017d85aaf7a07/AndroidSweetSheet-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

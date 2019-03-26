@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bsb_topLeft">30dp</dimen>
+    <dimen name="bsb_topRight">30dp</dimen>
+    <dimen name="bsb_topPadding">30dp</dimen>
+</resources>

@@ -36,6 +36,7 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
     String key ,quality;
     ListView lv;
     BottomSheetBehavior bottomSheetBehavior;
+    ArrayAdapter<String> itemsAdapter;
     public BottomSheetFragment() {
         // Required empty public constructor
     }
@@ -64,21 +65,21 @@ public class BottomSheetFragment extends BottomSheetDialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_bottom_sheet_dialog, container, false);
+        lv = view.findViewById(R.id.listview);
+
         Bundle bundle = getArguments();
         items = new ArrayList();
 
-        Log.e("bundle size: ", "onCreateView: "+bundle.size() );
-        for(int i=0;i < bundle.size();i++){
-            key = "key" + i;
-            quality = bundle.getString(key);
-            items.add(quality);
+        if(bundle != null) {
+            Log.e("bundle size: ", "onCreateView: " + bundle.size());
+            for (int i = 0; i < bundle.size(); i++) {
+                key = "key" + i;
+                quality = bundle.getString(key);
+                items.add(quality);
+            }
+            itemsAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
+            lv.setAdapter(itemsAdapter);
         }
-
-        lv = view.findViewById(R.id.listview);
-
-        ArrayAdapter<String> itemsAdapter =
-                new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, items);
-        lv.setAdapter(itemsAdapter);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

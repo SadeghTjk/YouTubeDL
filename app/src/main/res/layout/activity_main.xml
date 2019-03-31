@@ -81,5 +81,5 @@
         </LinearLayout>
     </LinearLayout>
 
-<include layout="@layout/bottom_sheet"/>
+    <include layout="@layout/bottom_sheet"/>
 </android.support.design.widget.CoordinatorLayout>

@@ -106,6 +106,11 @@
                 app:pb_textProgress="Loading" />
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+        <include layout="@layout/bottom_sheet" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-    <include layout="@layout/bottom_sheet"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

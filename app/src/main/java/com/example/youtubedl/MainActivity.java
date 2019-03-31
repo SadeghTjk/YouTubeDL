@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import com.dd.processbutton.iml.ActionProcessButton;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements ProgressGenerator
         progressGenerator = new ProgressGenerator(this);
         btnSignIn = findViewById(R.id.btnSignIn);
         toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.ic_icooo);
+
         download = new Youtube();
         bsf = new BottomSheetFragment();
 
@@ -61,8 +66,29 @@ public class MainActivity extends AppCompatActivity implements ProgressGenerator
 
         sheet = findViewById(R.id.sheet_bottom);
         bottomSheetBehavior = BottomSheetBehavior.from(sheet);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setIcon(R.drawable.ic_icooo);
+        bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+            @Override
+            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+
+                switch (newState){
+                    case BottomSheetBehavior.STATE_EXPANDED:
+                        toolbar.setNavigationIcon(R.drawable.ic_close_white_24dp);
+                    case BottomSheetBehavior.STATE_COLLAPSED:
+                        toolbar.setNavigationIcon(null);
+                    }
+            }
+            @Override
+            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+
+            }
+        });
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toolbar.setNavigationIcon(null);
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+        });
 
         final FirstBottomSheetDialog myBottomSheetDialog = FirstBottomSheetDialog.getInstance(this);
         myBottomSheetDialog.setTvTitle("Bottom Sheet Dialog");

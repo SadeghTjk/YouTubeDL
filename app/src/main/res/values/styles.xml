@@ -10,7 +10,7 @@
 
 
     <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@drawable/bsb</item>
+        <item name="android:background">@drawable/bsf</item>
     </style>
 
     <style name="BaseBottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">

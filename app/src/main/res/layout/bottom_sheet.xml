@@ -1,75 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sheet_bottom"
     style="@style/BottomSheetDialogTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bsb"
     android:clickable="false"
-    android:orientation="vertical"
     android:elevation="10dp"
+    android:orientation="vertical"
     app:behavior_hideable="false"
     app:behavior_peekHeight="56dp"
     app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_height="match_parent"
         android:layout_marginTop="50dp"
         android:drawablePadding="10dp"
         android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:padding="10dp">
 
-        <RelativeLayout
-            android:layout_width="70dp"
-            android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:minHeight="200dp"
+            android:visibility="gone"
+            app:cardElevation="4dp">
 
             <ImageView
-                android:id="@+id/ivAvatar"
+                android:id="@+id/video_pic"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_youtube" />
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <RelativeLayout
-            android:id="@+id/rlContent"
-            android:layout_width="100dp"
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_marginBottom="36dp"
+            android:fontFamily="@font/varela"
+            android:gravity="center"
+            android:text="Scooter Store: Product Page"
+            android:textColor="#000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/video_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:text="Title"
-                android:textAppearance="?android:textAppearanceLarge" />
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/varela"
+                android:gravity="center"
+                android:text="Type: video"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tvSubTitle"
+                android:id="@+id/video_quality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvTitle"
-                android:text="Subtitle"
-                android:textAppearance="?android:textAppearanceSmall" />
-        </RelativeLayout>
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/varela"
+                android:gravity="center"
+                android:text="Quality: 480p"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-        <RelativeLayout
-            android:layout_width="30dp"
+            <TextView
+                android:id="@+id/video_format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/varela"
+                android:gravity="center"
+                android:text="Format: mp4"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/youtubebtn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end">
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:minHeight="60dp"
+            android:text="Download from Youtube"
+            app:rippleColor="#A20000" />
 
-            <ImageView
-                android:id="@+id/ivClose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                app:srcCompat="@drawable/ic_youtube" />
-        </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ourserverbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:minHeight="60dp"
+            android:text="Download from Our Server"
+            app:rippleColor="#A20000" />
 
     </LinearLayout>
 

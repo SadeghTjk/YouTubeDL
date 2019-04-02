@@ -1,4 +1,4 @@
-package com.example.youtubedl;
+package com.danteh.youtubedl;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,13 +12,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.dd.processbutton.iml.ActionProcessButton;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import androidx.annotation.NonNull;

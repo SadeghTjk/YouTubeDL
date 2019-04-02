@@ -1,11 +1,11 @@
 
-package com.example.youtubedl;
+package com.danteh.youtubedl;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Adaptive {
+public class Encoded {
 
     @SerializedName("itag")
     @Expose

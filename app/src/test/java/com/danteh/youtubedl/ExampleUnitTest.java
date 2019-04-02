@@ -1,4 +1,4 @@
-package com.example.youtubedl;
+package com.danteh.youtubedl;
 
 import org.junit.Test;
 
